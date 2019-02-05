@@ -1,0 +1,12 @@
+<template>
+  <h1>{{ content.name }}</h1>
+</template>
+
+<script>
+export default {
+    props: ['content']
+}
+</script>
+
+<style>
+</style>
