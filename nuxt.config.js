@@ -92,51 +92,51 @@ module.exports = {
   /*
    ** Generate configuration
    */
-  generate: {
-    routes(callback) {
+  // generate: {
+  //   routes(callback) {
 
-      let routes = [];
+  //     let routes = [];
 
-      let umbraco = new UmbracoHeadless.HeadlessService(umbracoConfig);
+  //     let umbraco = new UmbracoHeadless.HeadlessService(umbracoConfig);
 
-      umbraco.site = umbraco.getById(1064);
-      umbraco.IsAuthenticated = true;
-      umbraco.BaseUrl = umbracoConfig.url;
-
-
-
-      // the returned node contains all properties
-
-      // Get the homepage
-      site.getAll().then(homeResponse => {
-
-        let homeNode = homeResponse.results[0];
-
-        routes.push({
-          route: homeNode.url,
-          payload: homeNode
-        })
-
-
-        site.getChildren(homeNode).then(descendantsResponse => {
-
-          descendantsResponse.results.forEach(node => {
-            routes.push({
-              route: node.url,
-              payload: node
-            })
-          });
-
-          callback(null, routes);
-
-        })
+  //     umbraco.site = umbraco.getById(1064);
+  //     umbraco.IsAuthenticated = true;
+  //     umbraco.BaseUrl = umbracoConfig.url;
 
 
 
+  //     // the returned node contains all properties
+
+  //     // Get the homepage
+  //     site.getAll().then(homeResponse => {
+
+  //       let homeNode = homeResponse.results[0];
+
+  //       routes.push({
+  //         route: homeNode.url,
+  //         payload: homeNode
+  //       })
 
 
-      }).catch(callback)
+  //       site.getChildren(homeNode).then(descendantsResponse => {
 
-    }
-  }
+  //         descendantsResponse.results.forEach(node => {
+  //           routes.push({
+  //             route: node.url,
+  //             payload: node
+  //           })
+  //         });
+
+  //         callback(null, routes);
+
+  //       })
+
+
+
+
+
+  //     }).catch(callback)
+
+  //   }
+  // }
 }
