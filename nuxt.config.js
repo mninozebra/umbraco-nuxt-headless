@@ -10,17 +10,17 @@ module.exports = {
   head: {
     title: 'umbraco-nuxt',
     meta: [{
-      charset: 'utf-8'
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1'
-    },
-    {
-      hid: 'description',
-      name: 'description',
-      content: 'An Umbraco + Nuxt project'
-    }
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'An Umbraco + Nuxt project'
+      }
     ],
     link: [{
       rel: 'icon',
@@ -55,14 +55,7 @@ module.exports = {
    ** Middleware
    */
   router: {
-    middleware: 'preview-middleware',
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'dynamic-routes',
-        path: '*',
-        component: resolve(__dirname, 'pages/_.vue')
-      })
-    }
+    middleware: 'preview-middleware'
   },
 
   /*
@@ -125,11 +118,6 @@ module.exports = {
         })
 
 
-
-
-
-
-
         site.getChildren(homeNode).then(descendantsResponse => {
 
           descendantsResponse.results.forEach(node => {
@@ -152,4 +140,3 @@ module.exports = {
     }
   }
 }
-
