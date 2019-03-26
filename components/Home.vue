@@ -1,6 +1,6 @@
 <template>
   <div v-if="$nuxt.$route.path == data.url">
-    <h1>{{data.contentTypeAlias}}</h1>
+    <h1>{{data.name}}</h1>
     <img
       :src="'https://mni-nozebra-dks-humorous-red-panda.s1.umbraco.io' + data.image.url"
       style="width: 25vw; height: 25vh;"

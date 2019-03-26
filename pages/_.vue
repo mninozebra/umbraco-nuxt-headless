@@ -7,6 +7,7 @@
         <nuxt-link :to="data.url">{{data.name}}</nuxt-link>
       </li>
     </ul>
+    <br>
     <component v-for="data in content" :key="data.id" :is="data.contentTypeAlias" :data="data"></component>
   </div>
 </template>

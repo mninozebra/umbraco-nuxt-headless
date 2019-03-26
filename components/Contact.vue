@@ -1,6 +1,6 @@
 <template>
   <div v-if="$nuxt.$route.path == data.url">
-    <h1>{{data.contentTypeAlias}}</h1>
+    <h1>{{data.name}}</h1>
     <br>
     <h2>Last updated:</h2>
     <p>{{data.updateDate}}</p>
