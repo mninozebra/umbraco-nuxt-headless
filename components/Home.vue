@@ -11,6 +11,7 @@
     <br>
     <h2>Updated by:</h2>
     <p>{{data.writerName}}</p>
+    {{data.richText}}
   </div>
 </template>
 
